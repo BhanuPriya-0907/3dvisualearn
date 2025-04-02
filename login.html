@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Learn - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="glass-container">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <h1>3D Learn</h1>
+        <button id="login-btn" class="button">Login with Google</button>
+        <a href="home.html" class="link">Go to Home</a>
+        <div id="googleSignInBtn"></div>
+
+    </div>
+
+    <script>
+        function handleCredentialResponse(response) {
+            console.log("Google Token: ", response.credential);
+            window.location.href = "home.html";
+        }
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: "YOUR_GOOGLE_CLIENT_ID",
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById("login-btn"),
+                { theme: "outline", size: "large" }
+            );
+        };
+    </script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      function handleCredentialResponse(response) {
+        console.log("Encoded JWT ID token: " + response.credential);
+      }
+      
+      window.onload = function () {
+        google.accounts.id.initialize({
+          client_id: "YOUR_CLIENT_ID_HERE", // Replace this with your actual Client ID
+          callback: handleCredentialResponse
+        });
+    
+        google.accounts.id.renderButton(
+          document.getElementById("googleSignInBtn"),
+          { theme: "outline", size: "large" }
+        );
+      };
+    </script>
+    
+</body>
+</html>

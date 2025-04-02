@@ -1,0 +1,59 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('../assets/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Glassmorphic Container */
+.glass-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.link {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
